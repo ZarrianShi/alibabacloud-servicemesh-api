@@ -507,6 +507,7 @@ message HTTPRoute {
 }
 
 
+
 // Describes the delegate VirtualService.
 // The following routing rules forward the traffic to `/productpage` by a delegate VirtualService named `productpage`,
 // forward the traffic to `/reviews` by a delegate VirtualService named `reviews`.
@@ -950,7 +951,19 @@ message HTTPRouteDestination {
 
   // Header manipulation rules
   Headers headers = 7;
+
+  // Added by Alibaba Cloud Service Mesh (ASM)
+  HTTPRouteFallback fallback = 30;
+  // End added by Alibaba Cloud Service Mesh (ASM)
 }
+
+// Added by Alibaba Cloud Service Mesh (ASM)
+// Fall back for HTTP Route
+message HTTPRouteFallback {
+  string case = 1;
+  Destination target = 2;
+}
+// End added by Alibaba Cloud Service Mesh (ASM)
 
 // L4 routing rule weighted destination.
 message RouteDestination {
