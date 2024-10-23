@@ -9593,6 +9593,35 @@ spec:
                                     type: object
                                 type: object
                             type: object
+                          multiFallbacks:
+                            items:
+                              properties:
+                                case:
+                                  type: string
+                                target:
+                                  properties:
+                                    host:
+                                      description: The name of a service from the
+                                        service registry.
+                                      type: string
+                                    port:
+                                      description: Specifies the port on the host
+                                        that is being addressed.
+                                      properties:
+                                        number:
+                                          maximum: 4294967295
+                                          minimum: 0
+                                          type: integer
+                                      type: object
+                                    subset:
+                                      description: The name of a subset within the
+                                        service.
+                                      type: string
+                                  required:
+                                  - host
+                                  type: object
+                              type: object
+                            type: array
                           weight:
                             description: Weight specifies the relative proportion
                               of traffic to be forwarded to the destination.
@@ -10573,6 +10602,35 @@ spec:
                                     type: object
                                 type: object
                             type: object
+                          multiFallbacks:
+                            items:
+                              properties:
+                                case:
+                                  type: string
+                                target:
+                                  properties:
+                                    host:
+                                      description: The name of a service from the
+                                        service registry.
+                                      type: string
+                                    port:
+                                      description: Specifies the port on the host
+                                        that is being addressed.
+                                      properties:
+                                        number:
+                                          maximum: 4294967295
+                                          minimum: 0
+                                          type: integer
+                                      type: object
+                                    subset:
+                                      description: The name of a subset within the
+                                        service.
+                                      type: string
+                                  required:
+                                  - host
+                                  type: object
+                              type: object
+                            type: array
                           weight:
                             description: Weight specifies the relative proportion
                               of traffic to be forwarded to the destination.
@@ -11553,6 +11611,35 @@ spec:
                                     type: object
                                 type: object
                             type: object
+                          multiFallbacks:
+                            items:
+                              properties:
+                                case:
+                                  type: string
+                                target:
+                                  properties:
+                                    host:
+                                      description: The name of a service from the
+                                        service registry.
+                                      type: string
+                                    port:
+                                      description: Specifies the port on the host
+                                        that is being addressed.
+                                      properties:
+                                        number:
+                                          maximum: 4294967295
+                                          minimum: 0
+                                          type: integer
+                                      type: object
+                                    subset:
+                                      description: The name of a subset within the
+                                        service.
+                                      type: string
+                                  required:
+                                  - host
+                                  type: object
+                              type: object
+                            type: array
                           weight:
                             description: Weight specifies the relative proportion
                               of traffic to be forwarded to the destination.

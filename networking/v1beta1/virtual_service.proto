@@ -955,6 +955,7 @@ message HTTPRouteDestination {
 
   // Added by Alibaba Cloud Service Mesh (ASM)
   HTTPRouteFallback fallback = 30;
+  repeated HTTPRouteFallback multi_fallbacks = 31;
   // End added by Alibaba Cloud Service Mesh (ASM)
 }
 
